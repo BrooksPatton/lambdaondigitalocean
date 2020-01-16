@@ -1,5 +1,5 @@
 var express = require('express');
-const db = require('monk')('localhost:32768/lambda');
+const db = require('monk')('localhost/lambda');
 const { writeDockerfile, build, run } = require('../dockerfile');
 const dbFunctions = db.get('functions');
 var router = express.Router();
