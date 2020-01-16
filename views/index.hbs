@@ -1,0 +1,25 @@
+<h1>Lambda on Digital Ocean</h1>
+
+<h2>Add Function</h2>
+
+<form method="POST" action="/lambda">
+  <div class="form-group">
+    <label for="name">Function Name</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="uri">GitHub Repo URI</label>
+    <input type="url" class="form-control" id="uri" name="uri">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Function</button>
+</form>
+
+<h2>Registered Functions</h2>
+
+<ul class="list-group">
+  {{#each lambdas}}
+    <li class="list-group-item">{{this.name}} - {{this.url}}</li>
+  {{/each}}
+</ul>
+<ul>
+</ul>

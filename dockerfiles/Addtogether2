@@ -1,0 +1,8 @@
+
+    FROM node:latest
+    RUN mkdir /code
+    WORKDIR /code
+    COPY ../wrapper.js /code/
+    RUN git clone https://github.com/BrooksPatton/add_lambda/blob/master/index.js lambda
+    ENTRYPOINT ["node", "wrapper.js"]
+    
